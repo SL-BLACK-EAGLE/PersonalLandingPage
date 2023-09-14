@@ -7,7 +7,7 @@ type ImageProps = {
     rounded?: string;
 } & NextImageProps;
 
-const Image = ({alt, src, classname, rounded, ...rest}:ImageProps) => {
+const Image = ({alt, src, className, rounded, ...rest}:ImageProps) => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     return (
         <div
@@ -23,7 +23,7 @@ const Image = ({alt, src, classname, rounded, ...rest}:ImageProps) => {
                         ? "scale-[1.02] blur-xl grayscale"
                         : "scale-100 blur-0 grayscale-0",
                     rounded,
-                    classname
+                    className
                 )}
                 alt={alt}
                 src={src}
@@ -35,4 +35,4 @@ const Image = ({alt, src, classname, rounded, ...rest}:ImageProps) => {
         </div>
     )
 }
-export default image;
+export default Image;
