@@ -1,6 +1,7 @@
 import './globals.css'
 import type {Metadata} from 'next'
 import {Sora} from 'next/font/google'
+import React from "react";
 
 const sora = Sora({subsets: ['latin']})
 
@@ -16,7 +17,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
         <body className={sora.className}>
         <div className="max-w-xl mx-auto">{children}</div>
         </body>
